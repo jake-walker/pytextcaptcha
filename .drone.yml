@@ -25,3 +25,4 @@ steps:
         - push
       branch:
         - master
+    failure: ignore
