@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "textcaptcha"
-version = "0.1.0"
+version = "0.1.1"
 description = "A library for using text-based CAPTCHAs from http://textcaptcha.com/."
 license = "GPL-3.0-only"
 authors = ["Jake Walker <hi@jakew.me>"]
@@ -10,7 +10,7 @@ homepage = "https://github.com/jake-walker/pytextcaptcha"
 repository = "https://github.com/jake-walker/pytextcaptcha.git"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.7"
 requests = "^2.22.0"
 
 [tool.poetry.dev-dependencies]
