@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "textcaptcha"
+version = "0.1.0"
+description = "A library for using text-based CAPTCHAs from http://textcaptcha.com/."
+license = "GPL-3.0-only"
+authors = ["Jake Walker <hi@jakew.me>"]
+maintainers = ["Jake Walker <hi@jakew.me>"]
+readme = "README.md"
+homepage = "https://github.com/jake-walker/pytextcaptcha"
+repository = "https://github.com/jake-walker/pytextcaptcha.git"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+requests = "^2.22.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+flake8 = "^3.7.9"
+flake8-print = "^3.1.4"
+flake8-eradicate = "^0.2.4"
+flake8-docstrings = "^1.5.0"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
