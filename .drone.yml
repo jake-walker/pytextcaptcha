@@ -13,7 +13,7 @@ steps:
   - name: publish
     image: nicklehmann/poetry:py3.7-latest-alpine
     commands:
-      - poetry install
+      - poetry install --no-dev
       - poetry publish --build --username $USERNAME --password $PASSWORD
     environment:
       USERNAME:

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "textcaptcha"
-version = "0.1.2"
+version = "0.2.0"
 description = "A library for using text-based CAPTCHAs from http://textcaptcha.com/."
 license = "GPL-3.0-only"
 authors = ["Jake Walker <hi@jakew.me>"]

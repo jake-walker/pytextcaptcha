@@ -8,8 +8,18 @@ Example:
             "a6105c0a611b41b08f1209506350279e"])
         print(captcha.question)
         print(captcha.check_answer('no'))
+
+Example:
+    Serialize a CAPTCHA object for storage, for example inside a Flask session:
+
+        captcha = Captcha("Is the sky blue?", [
+            "a6105c0a611b41b08f1209506350279e"])
+        session["captcha"] = captcha.serialize()
+        # ...
+        captcha = Captcha.deserialize(session["captcha"])
 """
 import hashlib
+import json
 
 
 class Captcha:
@@ -44,3 +54,26 @@ class Captcha:
 
         # Check whether the answer is in the list of correct answers
         return answer in self.answers
+
+    def serialize(self):
+        """Convert a CAPTCHA object to a JSON string.
+
+        Can be later deserialized with the deserialize() class method.
+
+        Returns:
+            str: A JSON representation of the CAPTCHA object.
+        """
+        return json.dumps(self.__dict__)
+
+    @classmethod
+    def deserialize(cls, json_data):
+        """Convert a JSON string of a CAPTCHA into a CAPTCHA object.
+
+        Args:
+            json_data (str): A JSON representation of a CAPTCHA object.
+
+        Returns:
+            Captcha: The deserialized CAPTCHA object.
+        """
+        data = json.loads(json_data)
+        return cls(question=data["question"], answers=data["answers"])
