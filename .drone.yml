@@ -10,6 +10,7 @@ steps:
       - rm poetry.lock
       - poetry install
       - poetry run flake8
+      - poetry run pytest -svv
   - name: publish
     image: nicklehmann/poetry:py3.7-latest-alpine
     commands:
