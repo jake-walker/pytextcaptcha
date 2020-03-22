@@ -3,9 +3,7 @@
 > A Python library for using text-based CAPTCHAs from <http://textcaptcha.com/>.
 
 <a href="https://ci.jakewalker.xyz/jake-walker/pytextcaptcha/"><img alt="Build Status" src="https://img.shields.io/drone/build/jake-walker/pytextcaptcha/master?server=https%3A%2F%2Fci.jakewalker.xyz&style=flat-square"></a>
-
 <a href="https://pypi.org/project/textcaptcha/"><img alt="PyPI Version" src="https://img.shields.io/pypi/v/textcaptcha?style=flat-square"></a>
-
 <img alt="GitHub License" src="https://img.shields.io/github/license/jake-walker/pytextcaptcha?style=flat-square">
 
 This is a simple wrapper around the [TextCaptcha](http://textcaptcha.com/) API which is a service which provides text-based CAPTCHA questions which helps to prevent spam from robots.

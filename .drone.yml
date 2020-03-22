@@ -5,13 +5,13 @@ name: default
 
 steps:
   - name: lint
-    image: nicklehmann/poetry:py3.8-latest-alpine
+    image: nicklehmann/poetry:py3.7-latest-alpine
     commands:
       - rm poetry.lock
       - poetry install
       - poetry run flake8
   - name: publish
-    image: nicklehmann/poetry:py3.8-latest-alpine
+    image: nicklehmann/poetry:py3.7-latest-alpine
     commands:
       - poetry install
       - poetry publish --build --username $USERNAME --password $PASSWORD
